@@ -82,8 +82,3 @@ SETUP.md for the assumed FPGA configuration this bridge expects.
 
 [GPL-3.0-or-later](LICENSE). Required by GNU Radio's licensing — the OOT
 module sources already carry `SPDX-License-Identifier: GPL-3.0-or-later`.
-
-## Acknowledgments
-
-Built at UC San Diego's [WCSNG](https://wcsng.ucsd.edu/). Original DPDK
-slot-transmission app authored by Jeeva Keshav S.
