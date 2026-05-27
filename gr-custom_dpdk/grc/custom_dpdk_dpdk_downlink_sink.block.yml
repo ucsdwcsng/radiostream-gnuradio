@@ -1,0 +1,47 @@
+id: custom_dpdk_dpdk_downlink_sink
+label: dpdk_downlink_sink
+category: '[custom_dpdk]'
+
+templates:
+  imports: from gnuradio import custom_dpdk
+  make: custom_dpdk.dpdk_downlink_sink(${socket_path}, ${bytes_per_slot}, ${cpu_core}, ${nco_freq_mhz}, ${slot_schedule})
+
+# matching arguments of old embedded py block
+parameters:
+- id: socket_path
+  label: Socket Path
+  dtype: string
+  default: "/dev/shm/dl_data.sock"
+
+- id: bytes_per_slot
+  label: Bytes Per Slot
+  dtype: int
+  default: 245760  #1 layers * 61440 * 4 bytes)
+
+- id: cpu_core
+  label: CPU Core
+  dtype: int
+  default: 0
+
+- id: nco_freq_mhz
+  label: NCO Freq (MHz)
+  dtype: real
+  default: -4000
+
+- id: slot_schedule
+  label: Slot Schedule (20)
+  dtype: int_vector
+  default: '[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]'
+
+# matching with "complex to ishort" block
+inputs:
+- label: in
+  domain: stream
+  dtype: short
+  vlen: 1
+
+outputs: []
+
+#  'file_format' specifies the version of the GRC yml format used in the file
+#  and should usually not be changed.
+file_format: 1

@@ -1,0 +1,52 @@
+# --- OS / editors ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.claude/
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+
+# --- C / C++ ---
+*.o
+*.obj
+*.so
+*.so.*
+*.dylib
+*.a
+*.la
+*.lo
+*.exe
+
+# --- CMake ---
+build/
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+install_manifest.txt
+_CPack_Packages/
+CTestTestfile.cmake
+Testing/
+compile_commands.json
+
+# --- DPDK bridge runtime outputs ---
+dpdk_bridge/dpdk_slot_transmission
+dpdk_bridge/total_dl_latency.bin
+dpdk_bridge/latency_logs/
+
+# --- backups / generated ---
+*.bak
+*.orig
+*.rej

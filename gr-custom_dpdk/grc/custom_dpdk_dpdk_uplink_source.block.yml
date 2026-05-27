@@ -1,0 +1,36 @@
+id: custom_dpdk_dpdk_uplink_source
+label: dpdk_uplink_source
+category: '[custom_dpdk]'
+
+templates:
+  imports: from gnuradio import custom_dpdk
+  make: custom_dpdk.dpdk_uplink_source(${socket_path}, ${bytes_per_slot}, ${cpu_core}, ${nco_freq_mhz})
+  
+parameters:
+- id: socket_path
+  label: Socket Path
+  dtype: string
+  default: "/dev/shm/ul_data.sock"
+- id: bytes_per_slot
+  label: Bytes Per Slot
+  dtype: int
+  default: 245760   # (1 layer * 61440 samples * 4 bytes)
+- id: cpu_core
+  label: CPU Core
+  dtype: int
+  default: 1
+- id: nco_freq_mhz
+  label: NCO Freq (MHz)
+  dtype: real
+  default: -4000
+
+inputs: []
+# matches "ishort to complex" block
+
+outputs:
+- label: out
+  domain: stream
+  dtype: short
+  vlen: 1
+  
+file_format: 1
