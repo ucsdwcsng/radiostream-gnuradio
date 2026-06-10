@@ -24,14 +24,14 @@ app that talks to the FPGA over a 100 Gbps NIC.
 
 ## Components
 
-- **[`gr-custom_dpdk/`](gr-custom_dpdk/)** — GNU Radio OOT module exposing two
+- **[`gr-custom_dpdk/`](gr-custom_dpdk/)**: GNU Radio OOT module exposing two
   blocks in GRC:
   - `dpdk_uplink_source` — FPGA → host (RX). Parameters: socket path,
     bytes/slot, CPU core, NCO freq (MHz).
   - `dpdk_downlink_sink` — host → FPGA (TX). Parameters: socket path,
     bytes/slot, CPU core, NCO freq (MHz), 20-element slot schedule
     (0 = idle, 1 = UL, 2 = DL, 3 = both).
-- **[`dpdk_bridge/`](dpdk_bridge/)** — the DPDK app the blocks talk to.
+- **[`dpdk_bridge/`](dpdk_bridge/)**: the DPDK app the blocks talk to.
   Reads the NCO + schedule from `/dev/shm/*.conf` at startup; builds control
   and data packets for the FPGA.
 
