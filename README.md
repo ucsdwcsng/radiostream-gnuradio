@@ -80,5 +80,5 @@ SETUP.md for the assumed FPGA configuration this bridge expects.
 
 ## License
 
-[GPL-3.0-or-later](LICENSE). Required by GNU Radio's licensing — the OOT
+[GPL-3.0-or-later](LICENSE). Required by GNU Radio's licensing; the OOT
 module sources already carry `SPDX-License-Identifier: GPL-3.0-or-later`.
