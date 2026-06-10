@@ -1,6 +1,6 @@
 # radiostream-gnuradio
 
-GNU Radio integration for the RadioStream RFSoC 4x2 FPGA project — a slot-based
+GNU Radio integration for RadioStream RFSoC 4x2 FPGA project; a slot-based
 (5G NR-style, 20 slots per SFN) bridge between a GNU Radio flowgraph and a DPDK
 app that talks to the FPGA over a 100 Gbps NIC.
 
