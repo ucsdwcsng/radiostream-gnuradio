@@ -72,7 +72,3 @@ both source and sink blocks must be present.
 - **`total_dl_latency.bin`**: binary log of per-slot DL latency in
   microseconds, written at exit.
 
-  ⚠️ **Known pre-existing bug**: `log_dump()` writes
-  `sizeof(uint64_t) * log_idx` bytes from a `uint16_t` buffer, so the file
-  is 4× the intended size and contains stale memory past the real samples.
-  Preserved verbatim from the team's version — fix at your discretion.
